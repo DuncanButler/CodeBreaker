@@ -5,8 +5,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Production", "Production", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CE0019E6-C979-46CA-A55F-95E763DD9CD8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Acceptance", "Acceptance", "{DC6FB93D-5187-4308-9C6F-5ABA04FB177D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1BC5CBE4-6A88-4CA8-99F8-3CFFA179651F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3B12AA60-5288-46C4-8186-DC54268ED6EC}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.txt = Readme.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DC6FB93D-5187-4308-9C6F-5ABA04FB177D} = {CE0019E6-C979-46CA-A55F-95E763DD9CD8}
+		{1BC5CBE4-6A88-4CA8-99F8-3CFFA179651F} = {CE0019E6-C979-46CA-A55F-95E763DD9CD8}
 	EndGlobalSection
 EndGlobal
