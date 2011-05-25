@@ -69,6 +69,7 @@
       <DependentUpon>Codebreaker_starts_game.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roles\Codebreaker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -83,7 +84,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Roles\" />
     <Folder Include="Tasks\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
