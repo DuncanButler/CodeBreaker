@@ -64,9 +64,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 8
  testRunner.When("I attempt to start the game");
 #line 9
- testRunner.Then("I should see screen text that includes: \'Welcome to Codebreaker!\'");
+ testRunner.Then("I should see screen text that includes: Welcome to Codebreaker!");
 #line 10
- testRunner.And("I should see screen text that includes: \'Enter guess:\'");
+ testRunner.And("I should see screen text that includes: Enter guess:");
 #line hidden
             testRunner.CollectScenarioErrors();
         }
