@@ -13,7 +13,8 @@ namespace CodeBreaker
 
         public void Start()
         {
-            
+            _output.WriteLine("Welcome to Codebreaker!");
+            _output.WriteLine("Enter guess:");
         }
     }
 }
