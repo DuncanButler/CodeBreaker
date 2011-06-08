@@ -89,7 +89,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 16
  testRunner.When(string.Format("I attempt to submit a guess: {0}", guess));
 #line 17
- testRunner.Then(string.Format("I should see on the screen \'{0}\'", mark));
+ testRunner.Then(string.Format("I should see screen text that includes: {0}", mark));
 #line hidden
             testRunner.CollectScenarioErrors();
         }

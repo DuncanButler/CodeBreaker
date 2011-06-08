@@ -14,7 +14,7 @@ Scenario Outline: submit guess
 	Given I am a codebreaker
 	And I did set the code to, <code>
 	When I attempt to submit a guess: <guess>
-	Then I should see on the screen '<mark>'
+	Then I should see screen text that includes: <mark>
 
 	Scenarios: no matches
 	| code | guess | mark |

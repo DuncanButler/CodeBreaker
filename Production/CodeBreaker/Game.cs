@@ -6,7 +6,7 @@ namespace CodeBreaker
     {
         readonly IOutput _output;
 
-        public Game(IOutput output)
+        public Game(IOutput output, ISecretCodeGenerator codeGenerator)
         {
             _output = output;
         }
@@ -15,6 +15,11 @@ namespace CodeBreaker
         {
             _output.WriteLine("Welcome to Codebreaker!");
             _output.WriteLine("Enter guess:");
+        }
+
+        public void Guess(string guess)
+        {
+            _output.WriteLine("");
         }
     }
 }
