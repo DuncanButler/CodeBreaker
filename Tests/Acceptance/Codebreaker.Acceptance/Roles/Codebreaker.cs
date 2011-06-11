@@ -11,14 +11,16 @@ namespace Codebreaker.Acceptance.Roles
         IOutput _screen;
         Game _game;
 
-        public void StartTheGame()
+        public void StartTheGame(string code = "0")
         {
             _screen = new StubScreen();
             var codeGenerator = new Mock<ISecretCodeGenerator>();
-            codeGenerator.Setup(x => x.GenerateCode()).Returns("0");
-            var game = new Game(_screen, codeGenerator.Object);
 
-            game.Start();
+            codeGenerator.Setup(x => x.GenerateCode()).Returns(code);
+
+            _game = new Game(_screen, codeGenerator.Object);
+
+            _game.Start();
         }
 
         public IEnumerable<string> LookAtOutput()
@@ -28,12 +30,7 @@ namespace Codebreaker.Acceptance.Roles
 
         public void SetSecretCodeTo(string code)
         {
-            _screen = new StubScreen();
-
-            var codeGenerator = new Mock<ISecretCodeGenerator>();
-            codeGenerator.Setup(x => x.GenerateCode()).Returns(code);
-
-            _game = new Game(_screen, codeGenerator.Object);
+            StartTheGame(code);
         }
 
         public void SubmitGuess(string guess)

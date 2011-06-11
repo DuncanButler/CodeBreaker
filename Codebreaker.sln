@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codebreaker.Acceptance", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeBreaker", "Production\CodeBreaker\CodeBreaker.csproj", "{4A2251F1-00A5-456C-BF83-0C238553C105}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codebreaker.Specifications", "Tests\Unit\Codebreaker.Specifications\Codebreaker.Specifications.csproj", "{449335BC-9685-4831-A968-08277FC1155D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,16 @@ Global
 		{4A2251F1-00A5-456C-BF83-0C238553C105}.Release|Mixed Platforms.Build.0 = Release|x86
 		{4A2251F1-00A5-456C-BF83-0C238553C105}.Release|x86.ActiveCfg = Release|x86
 		{4A2251F1-00A5-456C-BF83-0C238553C105}.Release|x86.Build.0 = Release|x86
+		{449335BC-9685-4831-A968-08277FC1155D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{449335BC-9685-4831-A968-08277FC1155D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{449335BC-9685-4831-A968-08277FC1155D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{449335BC-9685-4831-A968-08277FC1155D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{449335BC-9685-4831-A968-08277FC1155D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{449335BC-9685-4831-A968-08277FC1155D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{449335BC-9685-4831-A968-08277FC1155D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{449335BC-9685-4831-A968-08277FC1155D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{449335BC-9685-4831-A968-08277FC1155D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{449335BC-9685-4831-A968-08277FC1155D}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,5 +69,6 @@ Global
 		{DC6FB93D-5187-4308-9C6F-5ABA04FB177D} = {CE0019E6-C979-46CA-A55F-95E763DD9CD8}
 		{1BC5CBE4-6A88-4CA8-99F8-3CFFA179651F} = {CE0019E6-C979-46CA-A55F-95E763DD9CD8}
 		{6E459526-740B-4308-8455-D00A018E57ED} = {DC6FB93D-5187-4308-9C6F-5ABA04FB177D}
+		{449335BC-9685-4831-A968-08277FC1155D} = {1BC5CBE4-6A88-4CA8-99F8-3CFFA179651F}
 	EndGlobalSection
 EndGlobal
