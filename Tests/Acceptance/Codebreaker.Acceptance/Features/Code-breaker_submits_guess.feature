@@ -35,7 +35,7 @@ Scenario Outline: submit guess
 	| code | guess | mark | 
 	| 1234 | 5234  | +++  |
 	| 1234 | 5134  | ++-  |
-	| 1234 | 5134  | +--  |
+	| 1234 | 5124  | +--  |
 	| 1234 | 5123  | ---  |
 
 	Scenarios: all numbers correct

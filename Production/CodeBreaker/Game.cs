@@ -26,22 +26,20 @@ namespace CodeBreaker
         {
             string mark = "";
 
-            for (var i = 0; i < guess.Length;i++ )
-            {
+            for (int i = 0; i < guess.Length; i++)
                 if (ExactMatch(guess, i))
                     mark += "+";
-                else if (NumberMatch(guess, i))
+
+            for (var i = 0; i < guess.Length; i++)
+                if (NumberMatch(guess, i))
                     mark += "-";
-                else
-                    mark += "";
-            }
 
             _output.WriteLine(mark);
         }
 
         bool NumberMatch(string guess, int index)
         {
-            return _secret.Contains(guess[index].ToString());
+            return _secret.Contains(guess[index].ToString()) && ! ExactMatch(guess, index);
         }
 
         bool ExactMatch(string guess, int index)

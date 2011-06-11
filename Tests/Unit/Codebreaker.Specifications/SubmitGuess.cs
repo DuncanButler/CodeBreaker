@@ -34,7 +34,7 @@ namespace Codebreaker.Specifications
             () => A.CallTo(() => _output.WriteLine("+")).MustHaveHappened();
     }
 
-    [Subject("$Subject of Specification$")]
+    [Subject("CodeBreaker")]
     public class Submitting_a_guess_with_two_number_matches : CodeBreakerContext
     {
         Because of =
@@ -42,6 +42,16 @@ namespace Codebreaker.Specifications
 
         It ouputs_to_the_screen_two_minus_signs =
             () => A.CallTo(() => _output.WriteLine("--")).MustHaveHappened();
+    }
+
+    [Subject("CodeBreaker")]
+    public class Submitting_a_guess_with_one_number_match_and_one_exact_match : CodeBreakerContext
+    {
+        Because of =
+            () => _game.Guess("2535");
+
+        It output_to_the_screen_one_plus_sign_and_one_minus_sign =
+            () => A.CallTo(() => _output.WriteLine("+-")).MustHaveHappened();
     }
 
     public class CodeBreakerContext

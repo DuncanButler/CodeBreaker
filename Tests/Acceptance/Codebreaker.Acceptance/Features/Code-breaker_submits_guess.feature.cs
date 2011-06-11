@@ -71,7 +71,7 @@ position of a number in the secret code, the mark inclues one
         [NUnit.Framework.TestCaseAttribute("1234", "2545", "--")]
         [NUnit.Framework.TestCaseAttribute("1234", "5234", "+++")]
         [NUnit.Framework.TestCaseAttribute("1234", "5134", "++-")]
-        [NUnit.Framework.TestCaseAttribute("1234", "5134", "+--")]
+        [NUnit.Framework.TestCaseAttribute("1234", "5124", "+--")]
         [NUnit.Framework.TestCaseAttribute("1234", "5123", "---")]
         [NUnit.Framework.TestCaseAttribute("1234", "1234", "++++")]
         [NUnit.Framework.TestCaseAttribute("1234", "1243", "++--")]
