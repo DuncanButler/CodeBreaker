@@ -23,14 +23,14 @@ namespace Codebreaker.Acceptance.Roles
             _game.Start();
         }
 
-        public IEnumerable<string> LookAtOutput()
-        {
-            return ((StubScreen)_screen).ReadMessages;
-        }
-
         public void SetSecretCodeTo(string code)
         {
             StartTheGame(code);
+        }
+
+        public IEnumerable<string> LookAtOutput()
+        {
+            return ((StubScreen)_screen).ReadMessages;
         }
 
         public void SubmitGuess(string guess)
