@@ -1,5 +1,3 @@
-using System;
-
 namespace CodeBreaker
 {
     public class Game
@@ -24,27 +22,9 @@ namespace CodeBreaker
 
         public void Guess(string guess)
         {
-            string mark = "";
+            var marker = new Marker(_secret, guess);
 
-            for (int i = 0; i < guess.Length; i++)
-                if (ExactMatch(guess, i))
-                    mark += "+";
-
-            for (var i = 0; i < guess.Length; i++)
-                if (NumberMatch(guess, i))
-                    mark += "-";
-
-            _output.WriteLine(mark);
-        }
-
-        bool NumberMatch(string guess, int index)
-        {
-            return _secret.Contains(guess[index].ToString()) && ! ExactMatch(guess, index);
-        }
-
-        bool ExactMatch(string guess, int index)
-        {
-            return guess[index] == _secret[index];
+            _output.WriteLine(new string('+', marker.ExactMatchCount()) + new string('-', marker.NumberMatchCount()));
         }
     }
 }
