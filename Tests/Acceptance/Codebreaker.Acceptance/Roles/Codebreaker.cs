@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using CodeBreaker;
 using Moq;
 using SpecSalad;
@@ -11,31 +10,43 @@ namespace Codebreaker.Acceptance.Roles
         IOutput _screen;
         Game _game;
 
-        public void StartTheGame(string code = "0")
+        ISecretCodeGenerator SecretCodeGenerator
+        {
+            get
+            {
+                var toReturn = (ISecretCodeGenerator) Retrieve("SecretCodeGenerator");
+
+                if (toReturn == null)
+                {
+                    var mock  = new Mock<ISecretCodeGenerator>();
+                    mock.Setup(x => x.GenerateCode()).Returns("0");
+
+                    toReturn = mock.Object;
+                }
+
+                return toReturn;
+            }
+        }
+
+        public void StartTheGame()
         {
             _screen = new StubScreen();
-            var codeGenerator = new Mock<ISecretCodeGenerator>();
 
-            codeGenerator.Setup(x => x.GenerateCode()).Returns(code);
-
-            _game = new Game(_screen, codeGenerator.Object);
+            _game = new Game(_screen, SecretCodeGenerator);
 
             _game.Start();
         }
 
-        public void SetSecretCodeTo(string code)
+        public void SubmitGuess(string guess)
         {
-            StartTheGame(code);
+            StartTheGame();
+
+            _game.Guess(guess);
         }
 
         public IEnumerable<string> LookAtOutput()
         {
             return ((StubScreen)_screen).ReadMessages;
-        }
-
-        public void SubmitGuess(string guess)
-        {
-            _game.Guess(guess);
         }
     }
 

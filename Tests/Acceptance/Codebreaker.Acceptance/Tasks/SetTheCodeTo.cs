@@ -8,7 +8,7 @@ namespace Codebreaker.Acceptance.Tasks
         public override object Perform_Task()
         {
             var code = Details.Value();
-
+            
             Role.SetSecretCodeTo(code);
 
             return true;

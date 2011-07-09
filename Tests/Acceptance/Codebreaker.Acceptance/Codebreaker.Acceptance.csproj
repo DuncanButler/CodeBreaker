@@ -47,7 +47,7 @@
       <HintPath>..\..\..\packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="SpecSalad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\SpecSalad.1.1\lib\net40\SpecSalad.dll</HintPath>
+      <HintPath>..\..\..\packages\SpecSalad.1.3\lib\net40\SpecSalad.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -73,6 +73,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roles\Codebreaker.cs" />
+    <Compile Include="Roles\SecretCodeGenerator.cs" />
     <Compile Include="Tasks\SeeScreenText.cs" />
     <Compile Include="Tasks\SetTheCodeTo.cs" />
     <Compile Include="Tasks\StartTheGame.cs" />

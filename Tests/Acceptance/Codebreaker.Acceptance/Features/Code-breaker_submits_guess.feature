@@ -12,8 +12,9 @@
 
 Scenario Outline: submit guess
 	Given I am a codebreaker
-	And I did set the code to, <code>
-	When I attempt to submit a guess: <guess>
+	And there is a secret code generator
+	When the secret code generator did set the code to: <code>
+	And I attempt to submit a guess: <guess> 
 	Then I should see screen text that includes: <mark>
 
 	Scenarios: no matches
